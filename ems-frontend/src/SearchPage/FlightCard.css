@@ -1,0 +1,176 @@
+/* Tổng quan card */
+.flight-card-container {
+    display: flex;
+    justify-content: center; /* Căn giữa card */
+    align-items: center; /* Căn giữa card theo chiều dọc */
+    padding: 32px 0; /* Không ảnh hưởng toàn bộ màn hình */
+    background-color: transparent;
+  }
+  
+  .flight-card {
+    width: 50%; /* Card rộng 50% vùng chứa */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    position: relative; /* Dropdown box thuộc phạm vi card */
+    transition: transform 0.3s ease;
+  }
+  
+  .flight-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Thông tin chuyến bay */
+  .flight-details {
+    padding: 16px;
+  }
+  
+  .flight-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  
+  .flight-time {
+    text-align: center;
+  }
+  
+  .flight-time .time {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .flight-time .location {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .arrow {
+    font-size: 24px;
+    color: #0073e6;
+  }
+  
+  .flight-info p {
+    margin: 4px 0;
+    color: #333;
+  }
+  
+  /* Phần giá vé */
+  .flight-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: #0073e6;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .flight-price:hover {
+    background-color: #005bb5;
+  }
+  
+  .flight-price.highlight {
+    background-color: #ff9800;
+  }
+  
+  .flight-price .price {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .flight-price .price span {
+    font-size: 14px;
+  }
+  
+  .flight-price .label {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+  /* Dropdown box */
+  .flight-extra-info {
+    width: calc(100% - 32px); /* Chiều rộng khớp card */
+    margin: 16px auto; /* Cách card 16px */
+    padding: 16px;
+    background-color: #fff5e6;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .flight-extra-info p {
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  
+  /* Hiệu ứng xuất hiện */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/* CSS */
+.button-3 {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-3:hover {
+    background-color: #2c974b;
+  }
+  
+  .button-3:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-3:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-3:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }

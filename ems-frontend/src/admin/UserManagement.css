@@ -1,0 +1,26 @@
+.user-management {
+    padding: 20px;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .table-header {
+    background-color: #f1f5f9;
+    font-weight: bold;
+  }
+  

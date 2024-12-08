@@ -5,10 +5,8 @@ import './Home.css'
 function Home() {
     return (
         <div>
-            {/* Đây là comment trong JSX */}
-            <Navbar/>
             <TopBar/>
-            
+            <Navbar/>
         </div>
     );
   }

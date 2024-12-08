@@ -1,4 +1,4 @@
-export function hideSpinner() {
+export default function hideSpinner() {
     setTimeout(() => {
         const spinner = document.getElementById('spinner');
         if (spinner) {
