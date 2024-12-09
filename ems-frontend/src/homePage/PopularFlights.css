@@ -1,0 +1,96 @@
+/* Container chính */
+.popular-flights-container {
+    padding: 40px 20px;
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+    text-align: center;
+  }
+  
+  .popular-flights-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Grid cho card */
+  .flight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Card có độ rộng tối thiểu lớn hơn */
+    gap: 15px; /* Giảm khoảng cách giữa các card */
+    justify-items: center;
+  }
+  
+  
+  
+  /* Card */
+  .flight-card {
+    width: 100%;
+    max-width: 500px; /* Tăng độ rộng tối đa của card */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  
+  .flight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Hình ảnh */
+  .flight-image {
+    width: 100%;
+    height: 400px; /* Chiều cao ảnh cố định */
+    object-fit: cover; /* Cắt ảnh cho vừa */
+    transition: transform 0.3s ease;
+  }
+  
+  .flight-card:hover .flight-image {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+  }
+  
+  /* Overlay Gradient */
+  .flight-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%; /* Overlay chiếm nửa dưới */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+  }
+  
+  .flight-route {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .flight-date,
+  .flight-price {
+    font-size: 1rem;
+  }
+  
+  /* Phong cách chữ */
+  .flight-price {
+    font-weight: bold;
+    color: #ffdd00;
+  }
+  .card-container {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các card */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .flight-card {
+    margin: 5px; /* Giảm thêm khoảng cách bên ngoài */
+  }
+  

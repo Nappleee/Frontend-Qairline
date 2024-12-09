@@ -1,89 +1,140 @@
-.carousel-header .carousel-control-prev,
-.carousel-header .carousel-control-next {
-    background: transparent;
+/* Định dạng chính cho carousel */
+.carousel-header {
+    position: relative;
+    overflow: hidden;
 }
 
-.carousel-header .carousel-control-prev .carousel-control-prev-icon {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    padding: 25px 30px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 50px;
-    background-size: 60% 60%;
-}
-
-.carousel-header .carousel-control-next .carousel-control-next-icon {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    padding: 25px 30px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 0;
-    background-size: 60% 60%;
-
-}
-
-.carousel-header .carousel .carousel-indicators li,
-.carousel-header .carousel .carousel-indicators li,
-.carousel-header .carousel .carousel-indicators li {
-    opacity: 0;
+.carousel-header .carousel-inner {
+    position: relative;
+    width: 100%;
+    min-height: 70vh; /* Đảm bảo chiều cao đủ cho mọi màn hình */
 }
 
 .carousel-header .carousel-inner .carousel-item {
     position: relative;
-    min-height: 100vh 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Đồng bộ với carousel-inner */
 }
 
 .carousel-header .carousel-inner .carousel-item img {
-    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Quan trọng: Ngăn hình ảnh bị vỡ */
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.carousel-header .carousel-inner .carousel-item .carousel-caption  {
+/* Định dạng cho chú thích */
+.carousel-header .carousel-caption {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    padding-top: 60px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5));
-    background-size: cover;
+    background: rgba(0, 0, 0, 0.5); /* Lớp phủ mờ */
+    color: #fff;
+    padding: 20px;
 }
 
-@media (max-width: 600px) {
-    .carousel-header .carousel-inner .carousel-item img,
-    .carousel-header .carousel-inner .carousel-item .carousel-caption {
-        height: 600px;
-        margin-top: -100px;
+.carousel-header .carousel-caption h4 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.carousel-header .carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+    line-height: 1.3;
+}
+
+.carousel-header .carousel-caption p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+/* Nút trong caption */
+.carousel-header .carousel-caption a {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 25px;
+    transition: background-color 0.3s, transform 0.3s;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.carousel-header .carousel-caption a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Điều hướng */
+.carousel-header .carousel-control-prev,
+.carousel-header .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-header .carousel-control-prev:hover,
+.carousel-header .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-header .carousel-control-prev-icon,
+.carousel-header .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Chấm tròn (carousel indicators) */
+.carousel-header .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.carousel-header .carousel-indicators .active {
+    opacity: 1;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .carousel-header .carousel-inner .carousel-item {
+        min-height: 50vh;
     }
 
-    .carousel-header {
-        height: 600px !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .carousel-header .carousel-caption h1 {
+        font-size: 1.8rem;
     }
 
-    .carousel-header .carousel-control-prev .carousel-control-prev-icon,
-    .carousel-header .carousel-control-next .carousel-control-next-icon {
-        opacity: 0;
+    .carousel-header .carousel-caption h4 {
+        font-size: 1.2rem;
     }
-    
-    .search-bar {
-        margin-top: 20px; /* Điều chỉnh khoảng cách */
-        position: relative;
+
+    .carousel-header .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-header .carousel-caption a {
+        font-size: 1rem;
     }
 }

@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import Home from './homePage/Home'
 import SearchPage from './SearchPage/SearchPage'
 import Admin from './admin/Admin'
+import AboutPage from './AboutPage/AboutPage'
+import BlogPage from './BlogPage/BlogPage'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -14,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/admin/*" element={<Admin/>} />
       </Routes>
     </Router>

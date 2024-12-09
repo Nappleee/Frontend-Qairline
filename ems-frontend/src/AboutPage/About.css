@@ -1,0 +1,61 @@
+/* Tổng thể */
+.about-section {
+    background-color: #f5f7fa;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .about-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  .about-team li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .about-team i {
+    color: #007bff; /* Icon màu xanh */
+  }
+  
+  .about-features li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .about-features i {
+    color: #007bff; /* Icon màu xanh */
+  }
+  
+  /* Hình ảnh */
+  .img-fluid {
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2rem;
+    }
+  
+    .about-description {
+      font-size: 1rem;
+    }
+  }
+  
